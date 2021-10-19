@@ -1,0 +1,148 @@
+table {
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.main-content a{
+    color: red;
+    text-decoration: underline;
+}
+table.subject-info, th, td{
+    border: 1px solid black;
+}
+
+table.subject-info td, th{
+    padding: 3px;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+a {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+a:last-child {
+    border-right: none;
+}
+
+/*nav a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*nav a:hover:not(.active) {*/
+/*    background-color: #111;*/
+/*}*/
+
+.active {
+    background-color: #04AA6D;
+}
+
+#header-background{
+    width: 100%;
+    height: auto;
+}
+
+h1, h2{
+    text-align: center;
+    color:darkblue;
+    font-style: italic;
+}
+
+header > p{
+    text-align: center;
+    font-family: "Courier New";
+}
+
+img{
+    float: left;
+    padding: 0 0 0 10px;
+}
+
+#layout section, #layout header, #layout footer{
+    background-color: white;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#layout footer{
+    grid-area: peu;
+    text-align: right;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
