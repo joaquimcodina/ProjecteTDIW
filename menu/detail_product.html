@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Detalls del Producte</title>
+        <link rel="stylesheet" href="../estils/detailproduct.css">
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/funcions.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1 id="title">Disc Shop</h1>
+                <p>La teva botiga musical de confiança</p>
+            </header>
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Pop</a>
+                        <a href="#">Rock</a>
+                        <a href="#">Electrònica</a>
+                        <a href="#">Hip Hop</a>
+                        <a href="#">Indie</a>
+                        <a href="#">Alternative</a>
+                        <a href="#">Gospel</a>
+                        <a href="#">Reggaeton</a>
+                        <a href="#">Metal</a>
+                        <a href="#">Country</a>
+                    </div>
+                </div>
+                <a href="/menu/product_list.html">Productes</a>
+            </div>
+            <div class="small-container single-product">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../img/caratulas/thriller.jpg" width="100%" alt="MJ - Thriller" id="ProductImg">
+                        <div class="small-img-row">
+                            <div class="small-img-col">
+                                <img src="../img/caratulas/thriller.jpg" width="100%" class="small-img" onmouseover="canviarImatgeDetail(0);">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="../img/caratulas/thriller_2.jpg" width="100%" class="small-img" onmouseover="canviarImatgeDetail(1);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p>Categoria: Pop</p>
+                        <div id="availability" class="a-section a-spacing-base }">
+                            <span class="a-size-medium a-color-success">
+                                En stock.
+                            </span>
+                        </div>
+                        <h1>Thriller</h1>
+                        <h2>Michael Jackson</h2>
+                        <h4>12,64€</h4>
+                        <label><input type="number" value="1" min="1" max="10"></label>
+                        <a href="" class="btn">Afegir al cistell</a>
+                        <h3 class="desc">Descripció del producte:</h3>
+                        <p class="desc">Thriller és el sisè àlbum d'estudi de l'artista nord-americà Michael Jackson,
+                            publicat el 30 de novembre de 1982 per Epic Records. Produït per Quincy Jones qui va treballar
+                            també en l'àlbum Off the Wall (1979) de mateix artista, l'obra està composta per un balanç de
+                            diversos gèneres musicals: entre disc i rock, funk i balada, R & B i pop.</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy;Joaquim Codina i Gabriel Juan</p>
+            </footer>
+        </div>
+    </body>
+</html>

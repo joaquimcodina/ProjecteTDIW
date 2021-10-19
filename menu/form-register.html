@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Registrar-se</title>
+    <link rel="stylesheet" href="../estils/form.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/funcions.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registrar-se</div>
+        <div class="content">
+            <form action="#" method="post">
+                <div class="user-register">
+                    <div class="input-box">
+                        <span class="details">Nom</span>
+                        <label>
+                            <input type="text" placeholder="Escriu el teu nom" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Correu</span>
+                        <label>
+                            <input type="email" placeholder="Escriu el teu correu" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Contrasenya</span>
+                        <label>
+                            <input type="password" placeholder="Escriu la teva contrasenya" minlength="8" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirmar Contrasenya</span>
+                        <label>
+                            <input type="password" placeholder="Confirma la teva contrasenya" minlength="8" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Adreça</span>
+                        <label>
+                            <input type="text" placeholder="Escriu la teva adreça" maxlength="30" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Població</span>
+                        <label>
+                            <input type="text" placeholder="Escriu la teva població" maxlength="30" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Codi Postal</span>
+                        <label>
+                            <input type="number" placeholder="Escriu el teu codi postal" minlength="5" maxlength="5" required>
+                        </label>
+                    </div>
+                </div>
+                <p>En crear un compte, accepteu els nostres <a href="#">Termes i privadesa</a>.</p>
+                <div class="button">
+                    <input type="submit" value="Registrar-se">
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <p>Ja estàs registrat? <a href="#">Inicia Sessió</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
