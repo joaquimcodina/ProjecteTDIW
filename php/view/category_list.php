@@ -3,7 +3,7 @@
     <ul>
         <?php foreach ($categories as $category): ?>
             <li class="col">
-                <a href ="index.php?action=productes&category_id = <?php echo $category[id]?>">
+                <a href ="nav.php?action=productes&category_id = <?php echo $category[id]?>">
                     <?php echo $category['name']?>
                 </a>
             </li>
