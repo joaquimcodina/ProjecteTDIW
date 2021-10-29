@@ -6,48 +6,32 @@ nav {
     background-color: #333;
 }
 
-a {
-    float: left;
-    border-right:1px solid #bbb;
+.active{
+    color: springgreen;
+}
+
+.shopping-cart{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 5px 20px;
+    transition: background 0.5s;
+}
+
+nav img {
+    width: 170px;
+    height: 75px;
 }
 
 a:last-child {
     border-right: none;
 }
 
-nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav a:hover:not(.active) {
-    background-color: #111;
-}
-
 .active {
     background-color: #04AA6D;
 }
 
-#header-background{
-    width: 100%;
-    height: auto;
-}
-
-#title, #subtitle{
-    text-align: center;
-    color:darkblue;
-    font-style: italic;
-}
-
-header > p{
-    text-align: center;
-    font-family: "Courier New";
-}
-
-#layout section, #layout header, #layout footer{
+#layout section {
     background-color: white;
     margin: 2px;
     padding: 2px;
@@ -55,9 +39,9 @@ header > p{
     vertical-align: center;
 }
 
-#layout footer{
-    grid-area: peu;
-    text-align: right;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
@@ -74,52 +58,9 @@ header > p{
     text-decoration: none;
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover {
     background-color: red;
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 
 /*ESTILS DETALL PRODUCTE*/
 *{
@@ -236,11 +177,15 @@ p{
 }
 
 /*ZOOM IMATGE*/
-#ProductImg:hover {
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4);
+#ProductImg {
+    transition: transform .1s; /* Animation */
+    margin: 0 auto;
 }
+
+#ProductImg:hover {
+    transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 /*ESTILS PEU DE PAGINA*/
 *{
     margin: 0;

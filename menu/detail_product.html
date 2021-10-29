@@ -2,42 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Detalls del Producte</title>
         <link rel="stylesheet" href="../estils/detailproduct.css">
         <script src="../js/jquery-3.6.0.min.js"></script>
         <script src="../js/funcions.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
         <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <div id="layout">
-            <header>
-                <h1 id="title">Disc Shop</h1>
-                <p>La teva botiga musical de confiança</p>
-            </header>
-            <div class="navbar">
-                <a href="#home">Home</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Categories
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Pop</a>
-                        <a href="#">Rock</a>
-                        <a href="#">Electrònica</a>
-                        <a href="#">Hip Hop</a>
-                        <a href="#">Indie</a>
-                        <a href="#">Alternative</a>
-                        <a href="#">Gospel</a>
-                        <a href="#">Reggaeton</a>
-                        <a href="#">Metal</a>
-                        <a href="#">Country</a>
-                    </div>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <img src="../img/Logo_2.0.png" alt="Icona">
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span></a>
                 </div>
-                <a href="/menu/product_list.html">Productes</a>
-            </div>
+                <div class="navbar-brand">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="../menu/category_list.html" class="nav-link">Categories</a>
+                    <a href="/menu/product_list.html" class="navbar-item  active">Productes</a>
+                    <a href="#" class="navbar-item">Sobre</a>
+                    <a href="#" class="navbar-item">Contacte</a>
+                </div>
+                <div class="navbar-collapse">
+                    <a href="#" class="nav-link shopping-cart"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="../menu/form-register.html" class="nav-link">Registrar</a>
+                    <a href="../menu/form-login.html" class="nav-link">Iniciar Sessió</a>
+                </div>
+            </nav>
             <div class="small-container single-product">
                 <div class="row">
                     <div class="col-2">
@@ -65,9 +59,9 @@
                         <a href="" class="btn">Afegir al cistell</a>
                         <h3 class="desc">Descripció del producte:</h3>
                         <p class="desc">Thriller és el sisè àlbum d'estudi de l'artista nord-americà Michael Jackson,
-                            publicat el 30 de novembre de 1982 per Epic Records. Produït per Quincy Jones qui va treballar
-                            també en l'àlbum Off the Wall (1979) de mateix artista, l'obra està composta per un balanç de
-                            diversos gèneres musicals: entre disc i rock, funk i balada, R & B i pop.</p>
+                            publicat el 30 de novembre de 1982 per Epic Records.
+                        </p>
+                        <iframe src="https://open.spotify.com/embed/album/2ANVost0y2y52ema1E9xAZ" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 </div>
             </div>
