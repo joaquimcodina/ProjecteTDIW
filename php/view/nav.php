@@ -10,6 +10,9 @@ switch ($action){
     case 'categories':
         require __DIR__ . '../resource_category_list.php';
         break;
+    case 'artistes':
+        require __DIR__ . '../resource_artists_list.php';
+        break;
     case 'productes':
         require __DIR__ . '../resource_product_list.php';
         break;
