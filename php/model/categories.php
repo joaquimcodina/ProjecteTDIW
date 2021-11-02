@@ -5,7 +5,7 @@
  */
 function getCategory() {
     $conn = \connectBD::conn();
-    $sql = "SELECT id, 'name' FROM category";
+    $sql = "SELECT id_categoria, nom_categoria, foto FROM CATEGORIES";
     $stmt = $conn ->query($sql, \PDO::FETCH_ASSOC);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -18,11 +18,11 @@ function getCategory() {
 
 function getCategoryById($categoryId) {
    $conn = \connectBD::conn();
-    $sql = "SELECT id, 'name' FROM category WHERE id = :category_id";
+    $sql = "SELECT id_categoria, nom_categoria, foto FROM CATEGORIES WHERE id_categoria = :id_categoria";
     $stmt = $conn ->prepare($sql);
     $stmt->execute(
         [
-            'category_id' => $categoryId,
+            'id_categoria' => $categoryId,
         ]
     );
 
