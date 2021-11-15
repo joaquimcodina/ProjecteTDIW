@@ -178,7 +178,7 @@ p{
 
 /*ZOOM IMATGE*/
 #ProductImg {
-    transition: transform .1s; /* Animation */
+    transition: transform 0.1s; /* Animation */
     margin: 0 auto;
 }
 
