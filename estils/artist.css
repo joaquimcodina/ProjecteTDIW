@@ -11,14 +11,6 @@ body{
     font-family: sans-serif;
 }
 
-.novetats h2, .mesVenuts h2{
-    display: inline-block;
-    background: #000000;
-    color: #fff;
-    padding: 10px 150px;
-    margin: 10px 0;
-}
-
 /*ESTILS NAVEGADOR*/
 nav {
     list-style-type: none;
@@ -247,16 +239,4 @@ footer{
 
 .btn:hover{
     background: #563434;
-}
-
-a:last-child {
-    border-right: none;
-}
-
-#layout section {
-    background-color: white;
-    margin: 2px;
-    padding: 2px;
-    text-align: center;
-    vertical-align: center;
 }

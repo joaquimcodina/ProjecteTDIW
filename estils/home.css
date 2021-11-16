@@ -77,11 +77,6 @@ a:last-child {
     vertical-align: center;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-}
-
 .navbar a {
     float: left;
     font-size: 16px;

@@ -25,8 +25,12 @@ nav {
 }
 
 .shopping-cart{
+    border: none;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    background: #ff523b;
+    font-size: 16px;
+    background-color: #f44336;
     color: #fff;
     padding: 5px 20px;
     transition: background 0.5s;
@@ -41,10 +45,6 @@ a:last-child {
     border-right: none;
 }
 
-.active {
-    background-color: #04AA6D;
-}
-
 #header-background{
     width: 100%;
     height: auto;
@@ -56,11 +56,6 @@ a:last-child {
     padding: 2px;
     text-align: center;
     vertical-align: center;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
 }
 
 .navbar a {
