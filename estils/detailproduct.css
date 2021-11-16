@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
 nav {
     list-style-type: none;
     margin: 0;
@@ -39,11 +49,6 @@ a:last-child {
     vertical-align: center;
 }
 
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -62,17 +67,31 @@ body {
     background-color: red;
 }
 
+.navbar-right{
+    float: right;
+}
+
+.shopping-cart img{
+    width: 35px;
+    height: 25px;
+}
+
+.logo-image{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -8px;
+}
+
+.logo-image img{
+    width: 75px;
+    height: 75px;
+    margin-top: -10px;
+    margin-left: -11px;
+}
+
 /*ESTILS DETALL PRODUCTE*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-}
-
 .small-container{
     max-width: 1000px;
     margin: auto;
@@ -187,17 +206,12 @@ p{
 }
 
 /*ESTILS PEU DE PAGINA*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 footer{
     position: absolute;
     background: #111;
     height: auto;
     width: 100%;
-    font-family: "Segoe UI";
+    font-family: sans-serif;
     padding-top: 40px;
     color: #fff;
 }
