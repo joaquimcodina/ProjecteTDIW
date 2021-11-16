@@ -1,7 +1,7 @@
 <div class="container">
     <div class="title">Iniciar Sessió</div>
     <div class="content">
-        <form action="#">
+        <form action="<?php include_once __DIR__."/../controller/form_login.php"; ?>" method="post">
             <div class="user-sign">
                 <div class="input-box">
                     <span class="details">Correu</span>
@@ -19,6 +19,5 @@
                 <input type="submit" name="login" value="Iniciar Sessió">
             </div>
         </form>
-        <?php include_once __DIR__."/../controller/form_login.php"; ?>
     </div>
 </div>

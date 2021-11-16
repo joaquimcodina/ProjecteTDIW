@@ -10,9 +10,9 @@
             <li><a href="<?php echo "?action=".$action='contacte'?>">Contacte</a></li>
         </ul>
         <ul class="menu-footer">
-            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
         </ul>
     </div>
     <div class="footer-bottom">

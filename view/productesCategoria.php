@@ -11,8 +11,8 @@
             </p>
             <p><?php echo $producteCategoria['preu']?>€</p>
             <div class="actions">
-                <a class="btn" onclick="detallProductes(<?php echo $producteCategoria['id_album']?>)"><i class="fa fa-info-circle"></i></a>
-                <a href="" class="btn"><i class="fa fa-shopping-cart"></i></a>
+                <a class="btn" onclick="detallProductes(<?php echo $producteCategoria['id_album']?>)">Detalls</a>
+                <a href="" class="btn">Afegir al cistell</a>
             </div>
         </div>
     <?php } ?>

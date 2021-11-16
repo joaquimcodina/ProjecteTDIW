@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="/estils/form.css">
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/funcions.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <?php include_once __DIR__.'/controller/form_login.php'; ?>
+        <header>
+            <?php include_once __DIR__.'/controller/nav.php'; ?>
+        </header>
+        <div class="layout">
+            <?php include_once __DIR__.'/controller/form_login.php'; ?>
+        </div>
     </body>
 </html>

@@ -2,7 +2,7 @@
     <?php foreach($detailProduct as $product){ ?>
         <div class="row">
             <div class="col-2">
-                <img src="<?php echo $product['foto']?>" width="100%" alt="<?php echo $product['nom_album']?>" id="ProductImg'">
+                <img src="<?php echo $product['foto']?>" width="100%" alt="<?php echo $product['nom_album']?>" id="ProductImg">
                 <div class="small-img-row">
                     <div class="small-img-col">
                         <img src="<?php echo $product['foto']?>" width="100%" class="small-img" onmouseover="canviarImatgeDetail(0);" alt="Imatge1">
@@ -20,7 +20,7 @@
                         }
                     }?>
                 </p>
-                <div id="availability" class="a-section a-spacing-base }">
+                <div id="availability" class="a-section a-spacing-base">
                     <span class="a-size-medium a-color-success">
                         En stock.
                     </span>

@@ -1,8 +1,8 @@
 <div class="container">
     <div class="title">Registrar-se</div>
     <div class="content">
-        <form method="post">
-            <div class="user-register">
+        <form action="<?php include_once __DIR__."/../controller/form_register.php"; ?>" method="post">
+        <div class="user-register">
                 <div class="input-box">
                     <span class="details">Nom</span>
                     <label>
@@ -51,6 +51,5 @@
                 <input type="submit" name="register" value="Registrar-se">
             </div>
         </form>
-        <?php include_once __DIR__."/../controller/form_register.php"; ?>
     </div>
 </div>
