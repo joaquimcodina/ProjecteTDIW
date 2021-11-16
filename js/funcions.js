@@ -33,8 +33,3 @@ function canviarImatgeDetail(id){
     var SmallImg = document.getElementsByClassName("small-img");
     ProductImg.src = SmallImg[id].src;
 }
-
-function checkActive(id){
-    var x = document.getElementsByClassName("nav-link");
-    x[id].style.color="springgreen";
-}
