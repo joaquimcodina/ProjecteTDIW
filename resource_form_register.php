@@ -11,9 +11,11 @@
         <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <header>
-            <?php include_once __DIR__.'/controller/nav.php'; ?>
-        </header>
+        <?php if(!isset($_GET["id"])){ ?> <!-- Si hi ha ID, no mostris nav, apareix nav extra-->
+            <header>
+                <?php include_once __DIR__.'/controller/nav.php'; ?>
+            </header>
+        <?php }?>
         <div class="layout">
             <?php include_once __DIR__.'/controller/form_register.php'; ?>
         </div>

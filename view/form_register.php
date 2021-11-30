@@ -1,7 +1,7 @@
 <div class="container">
     <div class="title">Registrar-se</div>
     <div class="content">
-        <form action="<?php include_once __DIR__."/../controller/form_register.php"; ?>" method="post">
+        <form action="<?php include_once __DIR__."/../index.php?action=register"; ?>" method="post">
         <div class="user-register">
                 <div class="input-box">
                     <span class="details">Nom</span>
