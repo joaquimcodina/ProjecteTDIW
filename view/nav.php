@@ -13,7 +13,7 @@
         <a href="<?php echo "?action=".$action='contacte'?>" class="navbar-item">Contacte</a>
     </div>
     <div class="navbar-right">
-        <a href="#" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
+        <a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
         <a href="<?php echo "?action=".$action='register'?>" class="nav-link">Registrar</a>
         <a href="<?php echo "?action=".$action='login'?>" class="nav-link">Iniciar Sessió</a>
     </div>

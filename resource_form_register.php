@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/estils/form.css">
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/funcions.js"></script>
+        <script src="/js/important_alerts.js"></script>
         <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     </head>
     <body>

@@ -18,6 +18,9 @@ switch($accio){
     case 'login':
         include __DIR__ . '/resource_form_login.php';
         break;
+    case 'cistell':
+        include __DIR__ . '/resource_shopping_cart.php';
+        break;
     default:
         include __DIR__ . '/resource_home.php';
         break;
