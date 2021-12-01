@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $accio = isset($_GET['action']) ? $_GET['action'] : NULL;
 
 switch($accio){
