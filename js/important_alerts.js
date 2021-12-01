@@ -5,7 +5,7 @@ function PasswordWrong_IS(){
     alert("Usuari o Contrasenya incorrecta")
 }
 
-function not-equal-password() {
+function notEqualPassword() {
     alert("Les contrasenyes no coincideixen. Intenta-ho de nou")
 }
 
