@@ -32,11 +32,11 @@ function getUserById($connexio): int {
     return($checkUser);
 }
 
-function loginUser($connexio): array{
+function loginUser($connexio, $email, $password): array{
     try{
         $consulta = $connexio->prepare("SELECT correu, password FROM USUARIS WHERE correu=:correu AND password=:password LIMIT 1");
-        $consulta->bindParam(":correu",trim($_POST['correu']),PDO::PARAM_STR); //trim=sense espais al principi i final
-        $consulta->bindParam(":password",password_hash(trim($_POST['password']), PASSWORD_DEFAULT),PDO::PARAM_STR);
+        $consulta->bindParam(":correu",trim($email),PDO::PARAM_STR); //trim=sense espais al principi i final
+        $consulta->bindParam(":password",password_hash(trim($password), PASSWORD_DEFAULT),PDO::PARAM_STR);
         $consulta->execute();
         $login = $consulta->fetch(PDO::FETCH_ASSOC);
     } catch(PDOException $e){
