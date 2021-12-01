@@ -14,7 +14,11 @@
     </div>
     <div class="navbar-right">
         <a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
-        <a href="<?php echo "?action=".$action='register'?>" class="nav-link">Registrar</a>
-        <a href="<?php echo "?action=".$action='login'?>" class="nav-link">Iniciar Sessió</a>
+        <?php if(isset($_SESSION)){ ?>
+            <img src="../img/shopping-cart.png" class="shopping-cart" alt="user_icon"></a>         
+        <?php } else {?>
+            <a href="<?php echo "?action=".$action='register'?>" class="nav-link">Registrar</a>
+            <a href="<?php echo "?action=".$action='login'?>" class="nav-link">Iniciar Sessió</a>
+        <?php } ?>
     </div>
 </nav>
