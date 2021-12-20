@@ -19,26 +19,31 @@ function registerUser($connexio){
     }
 }
 
-function getUserById($connexio): int {
+function getUserById($connexio){
     try{
-        $consulta = $connexio->prepare("SELECT nom_usuari, correu FROM USUARIS WHERE nom_usuari=:nom_usuari AND correu=:correu LIMIT 1");
-        $consulta->bindParam(":nom_usuari",trim($_POST['nom']),PDO::PARAM_STR); //trim=sense espais al principi i final
-        $consulta->bindParam(":correu",trim($_POST['correu']),PDO::PARAM_STR);
-        $consulta->execute();
-        $checkUser = $consulta->fetch(PDO::FETCH_ASSOC);
+        $consulta1 = $connexio->prepare("SELECT nom_usuari FROM USUARIS WHERE nom_usuari=:nom_usuari LIMIT 1");
+        $consulta2 = $connexio->prepare("SELECT correu FROM USUARIS WHERE correu=:correu LIMIT 1");
+        $consulta1->bindParam(":nom_usuari",trim($_POST['nom']),PDO::PARAM_STR);
+        $consulta2->bindParam(":correu",trim($_POST['correu']),PDO::PARAM_STR);
+        $consulta1->execute();
+        $consulta2->execute();
+        $checkUser = $consulta1->fetch(PDO::FETCH_ASSOC);
+        $checkEmail = $consulta2->fetch(PDO::FETCH_ASSOC);
     } catch(PDOException $e){
         echo "Error: ".$e->getMessage();
     }
-    return($checkUser);
+    return [$checkUser != null, $checkEmail != null];
 }
 
-function loginUser($connexio, $email, $password): array{
+function loginUser($connexio, $email): array{
     try{
-        $consulta = $connexio->prepare("SELECT correu, password FROM USUARIS WHERE correu=:correu AND password=:password LIMIT 1");
+        $consulta = $connexio->prepare("SELECT correu, password FROM USUARIS WHERE correu=:correu LIMIT 1");
         $consulta->bindParam(":correu",trim($email),PDO::PARAM_STR); //trim=sense espais al principi i final
-        $consulta->bindParam(":password",password_hash(trim($password), PASSWORD_DEFAULT),PDO::PARAM_STR);
         $consulta->execute();
         $login = $consulta->fetch(PDO::FETCH_ASSOC);
+        if($login == null){
+            return array();
+        }
     } catch(PDOException $e){
         echo "Error: ".$e->getMessage();
     }
