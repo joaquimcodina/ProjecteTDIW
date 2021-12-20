@@ -21,3 +21,7 @@
         </form>
     </div>
 </div>
+
+<?php if(isset($alert)) {?>
+    <script>alertes('<?php echo $alert ?>');</script>
+<?php } unset($alert);?>

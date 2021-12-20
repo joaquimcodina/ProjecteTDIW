@@ -33,3 +33,7 @@ function canviarImatgeDetail(id){
     var SmallImg = document.getElementsByClassName("small-img");
     ProductImg.src = SmallImg[id].src;
 }
+
+function alertes(message){
+    alert(message);
+}
