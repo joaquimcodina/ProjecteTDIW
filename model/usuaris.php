@@ -37,7 +37,7 @@ function getUserById($connexio){
 
 function loginUser($connexio, $email): array{
     try{
-        $consulta = $connexio->prepare("SELECT correu, password FROM USUARIS WHERE correu=:correu LIMIT 1");
+        $consulta = $connexio->prepare("SELECT * FROM USUARIS WHERE correu=:correu LIMIT 1");
         $consulta->bindParam(":correu",trim($email),PDO::PARAM_STR); //trim=sense espais al principi i final
         $consulta->execute();
         $login = $consulta->fetch(PDO::FETCH_ASSOC);

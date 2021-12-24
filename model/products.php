@@ -16,8 +16,8 @@ function getProducts($connexio): array{
 
 function getProductsHome($connexio): array{
     try{
-        $consulta1 = $connexio->prepare("SELECT id_album, nom_album, foto, preu, id_artista FROM ALBUMS ORDER BY RAND() LIMIT 3");
-        $consulta2 = $connexio->prepare("SELECT id_album, nom_album, foto, preu, id_artista FROM ALBUMS ORDER BY RAND() LIMIT 3");
+        $consulta1 = $connexio->prepare("SELECT * FROM ALBUMS ORDER BY RAND() LIMIT 3");
+        $consulta2 = $connexio->prepare("SELECT * FROM ALBUMS ORDER BY RAND() LIMIT 3");
         $consulta1->execute();
         $consulta2->execute();
         $albumsHome1 = $consulta1->fetchAll(PDO::FETCH_ASSOC);
