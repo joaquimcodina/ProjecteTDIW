@@ -19,5 +19,8 @@
         <div class="layout">
             <?php include_once __DIR__.'/controller/category_list.php'; ?>
         </div>
+        <?php if(!isset($_GET["id"])){ ?> <!-- Si hi ha ID, no mostris nav, apareix nav extra-->
+            <?php include_once __DIR__.'/controller/footer.php'; ?>
+        <?php }?>
     </body>
 </html>

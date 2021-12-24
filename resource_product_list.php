@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="estils/detailproduct.css"/>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/funcions.js"></script>
-        <script src="/js/important_alerts.js"></script>
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -20,5 +19,8 @@
         <div class="layout">
             <?php include_once __DIR__.'/controller/product_list.php'; ?>
         </div>
+        <?php if(!isset($_GET["id"])){ ?> <!-- Si hi ha ID, no mostris nav, apareix nav extra-->
+            <?php include_once __DIR__.'/controller/footer.php'; ?>
+        <?php }?>
     </body>
 </html>
