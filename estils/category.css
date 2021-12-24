@@ -76,6 +76,28 @@ a:last-child {
     float: right;
 }
 
+.navbar-right p {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-right ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-right ul li ul {
+    display: none;
+}
+.navbar-right ul li a:hover + ul, .navbar-right ul li ul:hover {
+    display: block;
+}
+
 .shopping-cart img{
     width: 35px;
     height: 25px;
@@ -108,63 +130,12 @@ footer{
 }
 .footer-content{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
 }
 
-.footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
 .footer-content p{
     max-width: 500px;
     color: #ffffff;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
-.menu-footer{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-
-.menu-footer li{
-    margin: 0 10px;
-}
-
-.menu-footer a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu-footer a:hover, .menu-footer a:focus {
-    text-decoration: underline #fff;
-}
-
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer-bottom p{
-    color: #ffffff;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    color: #ffffff;
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
 }
 
 /*ESTILS LLISTA CARDS*/

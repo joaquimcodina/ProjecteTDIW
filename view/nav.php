@@ -13,12 +13,27 @@
         <a href="<?php echo "?action=".$action='contacte'?>" class="navbar-item">Contacte</a>
     </div>
     <div class="navbar-right">
-        <a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
-        <?php if(isset($_SESSION)){ ?>
-            <img src="../img/shopping-cart.png" class="shopping-cart" alt="user_icon"></a>         
+        <?php if(isset($_SESSION['correu'])){ ?>
+            <ul>
+                <li><a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
+                    <a href="" class="shopping-cart"><img src="../img/user-icon.png" alt="User Menu"></a>
+                    <ul>
+                        <li><a href="<?php echo "?action=".$action='orders-user'?>" class="nav-link">Comandes</a></li>
+                        <li><a href="<?php echo "?action=".$action='edit-profile'?>" class="nav-link">Editar Perfil</a></li>
+                        <li><a href="<?php echo "?action=".$action='logout'?>" class="nav-link">Tancar Sessió</a></li>
+                    </ul>
+                </li>
+            </ul>
         <?php } else {?>
-            <a href="<?php echo "?action=".$action='register'?>" class="nav-link">Registrar</a>
-            <a href="<?php echo "?action=".$action='login'?>" class="nav-link">Iniciar Sessió</a>
+            <ul>
+                <li><a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
+                    <a href="" class="shopping-cart"><img src="../img/user-icon.png" alt="User Menu"></a>
+                    <ul>
+                        <li><a href="<?php echo "?action=".$action='register'?>" class="nav-link">Registrar</a></li>
+                        <li><a href="<?php echo "?action=".$action='login'?>" class="nav-link">Iniciar Sessió</a></li>
+                    </ul>
+                </li>
+            </ul>
         <?php } ?>
     </div>
 </nav>

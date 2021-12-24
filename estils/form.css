@@ -82,6 +82,18 @@ a:last-child {
 .navbar-right{
     float: right;
 }
+.navbar-right ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-right ul li ul {
+    display: none;
+}
+.navbar-right ul li a:hover + ul, .navbar-right ul li ul:hover {
+    display: block;
+}
 
 .container{
     max-width: 600px;
