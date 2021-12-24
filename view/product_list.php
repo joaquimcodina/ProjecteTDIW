@@ -12,7 +12,9 @@
             <p><?php echo htmlentities($album['preu'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>€</p>
             <div class="actions">
                 <a class="btn" onclick="detallProductes(<?php echo htmlentities($album['id_album'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>)">Detalls</a>
-                <a href="" class="btn">Afegir al cistell</a>
+                <?php if($_SESSION['correu']){ ?>
+                    <a class="btn" onclick="producteCabas(<?php echo htmlentities($album['id_album'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>)" data-name='<?php echo htmlentities($album['nom_album'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-price='<?php echo htmlentities($album['preu'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-img='<?php echo htmlentities($album['foto'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-quantity='<?php echo htmlentities(1, ENT_QUOTES | ENT_HTML5, 'UTF-8')?>'>Afegir al cistell</a>
+                <?php } ?>
             </div>
         </div>
     <?php } ?>

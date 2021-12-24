@@ -32,8 +32,17 @@
                     }?>
                 </h3>
                 <h4><?php echo htmlentities("Preu: ".$product['preu'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>€</h4>
-                <label><input type="number" value="1" min="1" max="10"></label>
-                <a href="" class="btn">Afegir al cistell</a>
+                <div class="actions">
+                    <?php if($_SESSION['correu']){ ?>
+                        <label for="units"></label>
+                        <select name="units" id="units">
+                            <?php for ($i = 1; $i <= $product['unitats']; $i++){ ?>
+                                <option value="<?php echo htmlentities($i, ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>"><?php echo htmlentities($i, ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?></option>
+                            <?php }?>
+                        </select>
+                            <a class="btn" onclick="producteCabas(<?php echo htmlentities($product['id_album'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>)" data-name='<?php echo htmlentities($product['nom_album'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-price='<?php echo htmlentities($product['preu'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-img='<?php echo htmlentities($product['foto'], ENT_QUOTES | ENT_HTML5, 'UTF-8')?>' data-quantity='<?php echo htmlentities($i, ENT_QUOTES | ENT_HTML5, 'UTF-8')?>'>Afegir al cistell</a>
+                    <?php } ?>
+                </div>
                 <h3 class="desc">Descripció del producte:</h3>
                 <p class="desc"><?php echo htmlentities($product['descripcio'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?></p>
                 <iframe src="<?php echo htmlentities($product['playlist'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
