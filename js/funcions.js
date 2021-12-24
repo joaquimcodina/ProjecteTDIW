@@ -28,6 +28,20 @@ function detallProductesHome2(id){
     });
 }
 
+function producteCabas(id){
+    var e = document.getElementById("units");
+    if(e != null){
+        var unitsProduct = e.value;
+        $.get( '/index.php?action=cistell', {id : id, unitsProduct : unitsProduct}, function(resp) {
+            $("#container-cart").html(resp);
+        });
+    } else {
+        $.get( '/index.php?action=cistell', {id : id, unitsProduct : 1}, function(resp) {
+            $("#container-cart").html(resp);
+        });
+    }
+}
+
 function canviarImatgeDetail(id){
     var ProductImg = document.getElementById("ProductImg");
     var SmallImg = document.getElementsByClassName("small-img");
