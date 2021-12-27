@@ -74,7 +74,7 @@ CREATE TABLE COMANDES(
 
 CREATE TABLE LINIACOMANDA(
     id_liniacomanda      INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    preu_total_linia     INTEGER NOT NULL,
+    preu_total_linia     DOUBLE NOT NULL,
     unitats              INTEGER NOT NULL,
     id_album      	 	 INTEGER NOT NULL,
     id_comanda		 	 INTEGER NOT NULL,
