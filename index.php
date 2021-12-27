@@ -21,6 +21,9 @@ switch($accio){
     case 'cistell':
         include __DIR__ . '/resource_shopping_cart.php';
         break;
+    case 'tramitar-comanda':
+        include __DIR__ . '/resource_confirm_order.php';
+        break;
     default:
         include __DIR__ . '/resource_home.php';
         break;
