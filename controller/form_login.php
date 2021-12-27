@@ -10,6 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){ //HEM OMPLERT LES DADES DEL FORMULARI
         $connexio = connectaBD();
         $login = loginUser($connexio, $_POST['correu']);
         if (password_verify($_POST['password'], $login['password'])) {
+            $_SESSION['id_usuari'] =  $login['id_usuari'];
             $_SESSION['correu'] =  $login['correu'];
             $_SESSION['nom_usuari'] =  $login['nom_usuari'];
             $alert = 'Benvingut, '.$_SESSION['nom_usuari']."!!";
