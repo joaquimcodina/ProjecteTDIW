@@ -30,5 +30,12 @@
         $_SESSION['total'] += $_SESSION['price'][$prod] * $quantity;
         $alert='Producte afegit correctament!';
     }
+
+    if(isset($_GET['buidar_cabas'])){
+        //BUIDAR SESSIONS
+        unset($_SESSION['cart'], $_SESSION['name'], $_SESSION['price'], $_SESSION['quantity'],
+            $_SESSION['amount'], $_SESSION['img'], $_SESSION['ultimProd'],
+            $_SESSION['totalUnits'], $_SESSION['total']);
+    }
     include_once __DIR__.'/../view/shopping_cart.php';
 ?>

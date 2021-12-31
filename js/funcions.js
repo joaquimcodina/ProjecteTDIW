@@ -42,6 +42,12 @@ function producteCabas(id){
     }
 }
 
+function buidarCabas(){
+    $.get( '/index.php?action=cistell', {buidar_cabas : 1}, function(resp) {
+        $("#container-cart").html(resp);
+    });
+}
+
 function canviarImatgeDetail(id){
     var ProductImg = document.getElementById("ProductImg");
     var SmallImg = document.getElementsByClassName("small-img");
