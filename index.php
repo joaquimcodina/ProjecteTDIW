@@ -1,4 +1,5 @@
 <?php
+const UPLOADS_PUBLIC_PATH = 'img/';
 session_start();
 $accio = isset($_GET['action']) ? $_GET['action'] : NULL;
 
@@ -23,6 +24,15 @@ switch($accio){
         break;
     case 'tramitar-comanda':
         include __DIR__ . '/resource_confirm_order.php';
+        break;
+    case 'edit-profile':
+        include __DIR__ . '/resource_form_edit_profile.php';
+        break;
+    case 'orders-user':
+        include __DIR__ . '/resource_orders_user.php';
+        break;
+    case 'logout':
+        include __DIR__ . '/resource_logout.php';
         break;
     default:
         include __DIR__ . '/resource_home.php';
