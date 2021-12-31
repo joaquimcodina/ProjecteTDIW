@@ -24,7 +24,8 @@ CREATE TABLE USUARIS(
     password     VARCHAR(125) NOT NULL,
     adreça       VARCHAR(250) NOT NULL,
     poblacio     VARCHAR(125) NOT NULL,
-    codi_postal  INTEGER NOT NULL
+    codi_postal  INTEGER NOT NULL,
+    foto         VARCHAR(255) NOT NULL
 ) ENGINE = INNODB DEFAULT CHARSET = utf8;
 
 CREATE TABLE ARTISTES(
