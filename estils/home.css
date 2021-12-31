@@ -201,7 +201,7 @@ footer{
     background: #563434;
 }
 /*ESTILS CABÀS*/
-.container-cart table {
+#container-cart table, .container table{
     border-collapse: collapse;
     width: 100%;
 }
