@@ -11,7 +11,7 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <?php if(!isset($_GET["id"])){ ?> <!-- Si hi ha ID, no mostris nav, apareix nav extra-->
+        <?php if(!isset($_GET["id"]) && !isset($_GET['buidar_cabas'])){ ?> <!-- Si hi ha ID, no mostris nav, apareix nav extra-->
             <header>
                 <?php include_once __DIR__.'/controller/nav.php'; ?>
             </header>
