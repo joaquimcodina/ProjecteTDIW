@@ -12,7 +12,12 @@
             </tr>
         <?php }} ?>
     </table>
-    <p>Import Total: <?php echo htmlentities($_SESSION['total'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?> €</p>
-    <a class="btn" href="<?php echo "?action=".$action='tramitar-comanda'?>">Tramitar Comanda</a>
-    <a href="<?php echo "?action=".$action=''?>" class="btn">Esborrar Cabàs</a>
+    <?php if(isset($_SESSION['cart'])){ ?>
+        <p>Import Total: <?php echo htmlentities($_SESSION['total'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?> €</p>
+        <a class="btn" href="<?php echo "?action=".$action='tramitar-comanda'?>">Tramitar Comanda</a>
+        <a class="btn" onclick="buidarCabas()">Buidar Cabàs</a>
+    <?php } ?>
+    <?php if(!isset($_SESSION['cart'])){ ?>
+        <h3>El Cabàs està buit</h3>
+    <?php } ?>
 </div>
