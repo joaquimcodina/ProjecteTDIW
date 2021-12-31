@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){ //HEM OMPLERT LES DADES DEL FORMULARI
             } else {
                 registerUser($connexio);                    //Aquesta crida és al model, registrem el nostre usuari
                 $alert = 'Registre realitzat amb èxit';
+                header("Location:index.php?action=''");
             }
 
         } else{
