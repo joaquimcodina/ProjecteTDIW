@@ -16,7 +16,11 @@
         <?php if(isset($_SESSION['correu'])){ ?>
             <ul>
                 <li><a href="<?php echo "?action=".$action='cistell'?>" class="shopping-cart"><img src="../img/shopping-cart.png" alt="Shopping Cart"></a>
-                    <a href="" class="shopping-cart"><img src="../img/user-icon.png" alt="User Menu"></a>
+                    <?php if(isset($_SESSION['foto']) && $_SESSION['foto'] !== "") { ?>
+                        <a href="" class="shopping-cart"><img src="<?php echo UPLOADS_PUBLIC_PATH.$_SESSION['foto']?>" alt="User Menu"></a>
+                    <?php } else { ?>
+                        <a href="" class="shopping-cart"><img src="../img/user-icon.png" alt="User Menu"></a>
+                    <?php } ?>
                     <ul>
                         <li><a href="<?php echo "?action=".$action='orders-user'?>" class="nav-link">Comandes</a></li>
                         <li><a href="<?php echo "?action=".$action='edit-profile'?>" class="nav-link">Editar Perfil</a></li>
