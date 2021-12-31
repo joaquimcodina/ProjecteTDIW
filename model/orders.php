@@ -37,3 +37,26 @@ function getOrderById($connexio): array {
     }
     return($comanda);
 }
+
+function getOrderByUser($connexio): array {
+    try{
+        $consulta = $connexio->prepare("SELECT * FROM COMANDES WHERE id_usuari=:id_usuari");
+        $consulta->bindParam(":id_usuari",trim($_SESSION['id_usuari']),PDO::PARAM_INT); //trim=sense espais al principi i final, escrivim category_id (nom del parametre GET)
+        $consulta->execute();
+        $comanda = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch(PDOException $e){
+        echo "Error: ".$e->getMessage();
+    }
+    return($comanda);
+}
+
+function getOrderLine($connexio): array {
+    try{
+        $consulta = $connexio->prepare("SELECT * FROM LINIACOMANDA");
+        $consulta->execute();
+        $comanda = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch(PDOException $e){
+        echo "Error: ".$e->getMessage();
+    }
+    return($comanda);
+}
